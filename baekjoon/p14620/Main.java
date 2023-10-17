@@ -1,4 +1,8 @@
 import java.util.*;
+/**
+ * 시간 복잡도 n^6
+ * 하지만 n이 작아서 이문제에서는 통과할 수 있었다.
+ */
 
 public class Main {
     private static int n;
