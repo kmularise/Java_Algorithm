@@ -3,6 +3,7 @@ import java.util.*;
 // dfs 로 하면 2^30정도가 들텐데 시간 초과날 수 있다고 함. 
 // 실제로 시간 초과남..
 // 이때는 DP로 풀자.기저 사례, 메모리제이션, 로직, 초기화
+// 
 
 public class Main{
     private static int treeNumbers[] = new int[1000];
