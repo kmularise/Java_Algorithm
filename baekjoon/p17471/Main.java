@@ -1,4 +1,9 @@
 import java.util.*;
+/**
+ * bitmask를 이용해서 두가지 구역으로 나눈다.
+ * 각각에 대해 dfs를 한다. 시간 복잡도는 n * (2^n -1) 정도
+ * n이 작기 때문에 bitmask 풀이가 가능하다.
+ */
 
 class Info {
     Info (int node, int people) {
