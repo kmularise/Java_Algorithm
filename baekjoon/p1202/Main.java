@@ -36,16 +36,16 @@ public class Main {
             bags.add(sc.nextInt());
         }
         bags.sort((x, y) -> (x - y));
-        int answer = 0;
+        long answer = 0;
         int j = 0;
-        PriorityQueue<Point> queue = new PriorityQueue<>();
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
         for (Integer bag : bags) {
             while (j < n && bag >= jewerlys.get(j).key) {
-                queue.offer(jewerlys.get(j));
+                queue.offer(-jewerlys.get(j).value);
                 j++;
             }
             if (!queue.isEmpty()) {
-                answer += queue.poll().value;
+                answer += (long)-queue.poll();
             }
         }
         System.out.println(answer);
