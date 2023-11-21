@@ -11,7 +11,7 @@ class Point implements Comparable<Point>{
 
     @Override
     public int compareTo(Point another) {
-        return this.key >= another.key ? 1: -1; 
+        return this.value <= another.value ? 1: -1; 
     }
 
     public String toString() {
@@ -31,6 +31,7 @@ public class Main {
             Point pair = new Point(sc.nextInt(), sc.nextInt());
             jewerlys.add(pair);
         }
+        jewerlys.sort((x, y) -> (x.key - y.key));
         for (int i = 0 ; i < k ; i++) {
             bags.add(sc.nextInt());
         }
