@@ -1,6 +1,8 @@
 import java.util.*;
 import java.io.*;
 
+//시간 복잡도 nlogn
+
 public class Main {
     private static int n;
     private static List<List<Integer>> points;
