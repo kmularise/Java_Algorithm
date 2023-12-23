@@ -25,12 +25,10 @@ public class Main {
                 target += mPizzas.get(i);
             }
             check(target, size, mCounts);
-            // System.out.println(target + " " + 0 + " " + peek);
             for (int i = 1 ; i < m ; i++) {
-                target += mPizzas.get((peek + i) % m);
+                target += mPizzas.get((peek + i - 1) % m);
                 target -= mPizzas.get((i - 1) % m);
                 check(target, size, mCounts);
-                // System.out.println(target + " " + i + " " + peek);
             }
         }
     }
