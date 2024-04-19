@@ -1,6 +1,7 @@
 # 199. Binary Tree Right Side View
 트리 문제. BFS 변형 풀이인 느낌이다. 시간 복잡도는 O(n)일 거 같다.
 https://leetcode.com/problems/binary-tree-right-side-view/description/
+```java
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -51,4 +52,5 @@ class Solution {
         return rightNodes;
     }
 }
+```
 
