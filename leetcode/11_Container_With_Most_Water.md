@@ -33,3 +33,23 @@ class Solution {
     }
 }
 ```
+* 좀 더 간결한 풀이
+```java
+class Solution {
+    public int maxArea(int[] heights) {
+        int maxValue = 0;
+        int l = 0; 
+        int r = heights.length - 1;
+        while (l < r) {
+            if (heights[l] < heights[r]) {
+                maxValue = Math.max(heights[l] * (r - l), maxValue);
+                l++;
+            } else {
+                maxValue = Math.max(heights[r] * (r - l), maxValue);
+                r--;
+            }
+        }
+        return maxValue;
+    }
+}
+```
