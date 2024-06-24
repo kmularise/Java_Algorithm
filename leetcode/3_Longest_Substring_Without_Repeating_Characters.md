@@ -1,4 +1,4 @@
-# 76. Minimum Window Substring
+# 3. Longest Substring Without Repeating Characters
 * 문제
 * 슬라이딩 윈도우로 풀어도 되는데 다만 윈도우 크기가 가변이다.
 
