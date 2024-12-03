@@ -35,3 +35,43 @@ class Solution {
     }
 }
 ```
+
+* 다른 풀이
+# 416. Partition Equal Subset Sum
+- 문제 : https://leetcode.com/problems/partition-equal-subset-sum/description/
+- 각 숫자를 한번만 더하게끔 해서 DP 알고리즘 로직을 작성해야 했다.
+
+```java
+class Solution {
+    public boolean canPartition(int[] nums) {
+        //전체 합
+        int total = 0;
+        for (int num : nums) {
+            total += num;
+        }
+        if (total % 2 != 0) {
+            return false;
+        }
+        int[] dp = new int[total + 1];
+        dp[0] = 1;
+
+        for (int num : nums) {
+            List<Integer> targets = new ArrayList<>();
+            for (int sum = 0 ; sum <= total ; sum++) {
+                if (dp[sum] == 1 && sum + num <= total) {
+                    targets.add(sum + num);
+                }
+            }
+            for (int target : targets) {
+                dp[target] = 1;
+            }
+        }
+        for (int sum = 0 ; sum <= total ; sum++) {
+            if (dp[sum] == 1 && total / 2 == sum) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+```
